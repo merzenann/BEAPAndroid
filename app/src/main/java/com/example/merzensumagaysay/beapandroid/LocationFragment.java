@@ -15,14 +15,16 @@ public class LocationFragment extends Fragment {
 
 
     public LocationFragment() {
-        // Required empty public constructor
+
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
+        ((MainActivityUser)getActivity()).setActionBarTitle("Current Location");
+
         return inflater.inflate(R.layout.fragment_location, container, false);
     }
 

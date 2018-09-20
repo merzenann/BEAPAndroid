@@ -15,14 +15,17 @@ public class MessageFragment extends Fragment {
 
 
     public MessageFragment() {
-        // Required empty public constructor
+
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
+        ((MainActivityUser)getActivity()).setActionBarTitle("Message Admin");
+
+
         return inflater.inflate(R.layout.fragment_message, container, false);
     }
 
