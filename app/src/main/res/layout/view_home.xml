@@ -4,10 +4,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.merzensumagaysay.beapandroid.HomeFragment">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,7 +44,7 @@
                         </RelativeLayout>
 
                         <TextView
-                            android:id="@+id/dlscsb"
+                            android:id="@+id/dlscsbtxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
