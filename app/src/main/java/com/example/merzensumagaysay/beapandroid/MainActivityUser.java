@@ -14,18 +14,11 @@ import android.view.MenuItem;
 public class MainActivityUser extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ViewPager viewPager;
-    private ViewPagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_user);
-
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
-        viewPager.setOffscreenPageLimit(2);
-
-        setupViewPager();
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -46,17 +39,6 @@ public class MainActivityUser extends AppCompatActivity
 
         navigationView.setCheckedItem(R.id.nav_home);
     }
-
-    private void setupViewPager(){
-        adapter = new ViewPagerAdapter();
-
-        adapter.addView(new OnePresenter(findViewById(R.id.page1), this));
-        adapter.addView(new TwoPresenter(findViewById(R.id.page2), this));
-
-        viewPager.setAdapter(adapter);
-
-    }
-
 
 
     public void setActionBarTitle(String title)
@@ -94,6 +76,7 @@ public class MainActivityUser extends AppCompatActivity
             android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.FLMain,new LocationFragment());
             ft.commit();
+
         }
 
         else if (id == R.id.nav_message)

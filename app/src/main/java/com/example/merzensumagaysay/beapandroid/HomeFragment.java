@@ -15,23 +15,23 @@ import android.view.ViewGroup;
 
 public class HomeFragment extends Fragment {
 
+        @Override
+        public View onCreateView(LayoutInflater inflater,
+                ViewGroup container,
+                Bundle savedInstanceState) {
+
+            ((MainActivityUser)getActivity()).setActionBarTitle("Home");
+
+
+            return inflater.inflate(R.layout.view_home, container, false);
+
+        }
+
 
     public HomeFragment()
     {
 
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        ((MainActivityUser)getActivity()).setActionBarTitle("Home");
-
-
-
-        return inflater.inflate(R.layout.view_home, container, false);
-
-
-    }
 
 }
